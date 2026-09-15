@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-<a href="https://github.com/TheGreatAzizi/YTP-Font/releases"><img src="https://img.shields.io/github/v/release/TheGreatAzizi/YTP-Font?label=version&color=red&style=flat-square" alt="Version"></a>
+[<a href="https://github.com/TheGreatAzizi/YTP-Font/releases"><img src="https://img.shields.io/github/v/release/TheGreatAzizi/YTP-Font?label=version&color=red&style=flat-square" alt="Version"></a>](https://img.shields.io/github/v/tag/TheGreatAzizi/YTP-Font?label=version&color=red&style=flat-square)
   <a href="https://github.com/TheGreatAzizi/YTP-Font/blob/main/manifest.json"><img src="https://img.shields.io/badge/manifest-v3-blue?style=flat-square" alt="Manifest V3"></a>
   <a href="https://developer.chrome.com/docs/extensions/"><img src="https://img.shields.io/badge/Chrome-Extension-4285F4?style=flat-square&logo=googlechrome&logoColor=white" alt="Chrome"></a>
   <a href="https://github.com/TheGreatAzizi/YTP-Font/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-green?style=flat-square" alt="License"></a>
