@@ -1,58 +1,136 @@
 # YTP - Font
 
-**فونت فارسی دلخواه برای یوتیوب — ۲۰+ فونت زیبا | فقط متن فارسی تغییر می‌کند | نسخه پایدار v2.2.0**
-
-> برنامه‌نویس: **TheAzizi** — بدون فیکس باگ‌دار Bidi
+<p align="center">
+  <img src="icon128.png" width="96" height="96" alt="YTP - Font">
+</p>
 
 <p align="center">
-  <a href="https://www.youtube.com/@AziziWC"><img src="https://img.shields.io/badge/YouTube-AziziWC-red?style=for-the-badge&logo=youtube" /></a>
-  <a href="https://www.youtube.com/@The_azizi"><img src="https://img.shields.io/badge/YouTube-The_azizi-red?style=for-the-badge&logo=youtube" /></a>
-  <a href="https://t.me/luluch_code"><img src="https://img.shields.io/badge/Telegram-luluch_code-27A5E7?style=for-the-badge&logo=telegram" /></a>
-  <a href="https://x.com/the_azzi"><img src="https://img.shields.io/badge/X-the_azzi-black?style=for-the-badge&logo=x" /></a>
-  <a href="https://github.com/TheGreatAzizi"><img src="https://img.shields.io/badge/GitHub-TheGreatAzizi-181717?style=for-the-badge&logo=github" /></a>
+  <a href="https://github.com/TheGreatAzizi/YTP-Font/releases"><img src="https://img.shields.io/github/v/release/TheGreatAzizi/YTP-Font?label=version&color=red&style=flat-square" alt="Version"></a>
+  <a href="https://github.com/TheGreatAzizi/YTP-Font/blob/main/manifest.json"><img src="https://img.shields.io/badge/manifest-v3-blue?style=flat-square" alt="Manifest V3"></a>
+  <a href="https://developer.chrome.com/docs/extensions/"><img src="https://img.shields.io/badge/Chrome-Extension-4285F4?style=flat-square&logo=googlechrome&logoColor=white" alt="Chrome"></a>
+  <a href="https://github.com/TheGreatAzizi/YTP-Font/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-green?style=flat-square" alt="License"></a>
+  <a href="https://github.com/TheGreatAzizi/YTP-Font"><img src="https://img.shields.io/github/stars/TheGreatAzizi/YTP-Font?style=flat-square" alt="Stars"></a>
+</p>
+
+<p align="center">
+  <b>فونت فارسی دلخواه برای یوتیوب — 20+ فونت زیبا | فقط متن فارسی تغییر می‌کند</b><br>
+  <i>Persian Font Changer for YouTube — 20+ beautiful Persian fonts, affects Persian text only</i>
+</p>
+
+<p align="center">
+  <a href="https://www.youtube.com/@AziziWC"><img src="https://img.shields.io/badge/YouTube-AziziWC-red?style=for-the-badge&logo=youtube" alt="AziziWC"></a>
+  <a href="https://www.youtube.com/@The_azizi"><img src="https://img.shields.io/badge/YouTube-The_azizi-red?style=for-the-badge&logo=youtube" alt="The_azizi"></a>
+  <a href="https://t.me/luluch_code"><img src="https://img.shields.io/badge/Telegram-luluch_code-27A5E7?style=for-the-badge&logo=telegram" alt="Telegram"></a>
+  <a href="https://x.com/the_azzi"><img src="https://img.shields.io/badge/X-the_azzi-black?style=for-the-badge&logo=x" alt="X"></a>
+  <a href="https://github.com/TheGreatAzizi"><img src="https://img.shields.io/badge/GitHub-TheGreatAzizi-181717?style=for-the-badge&logo=github" alt="GitHub"></a>
 </p>
 
 ---
 
-## ✨ ویژگی‌ها (پایدار)
-- 🎨 **۲۰+ فونت فارسی**: وزیرمتن، شبنم، ساحل، صمیم، استعداد، لاله‌زار، یکان‌بخ، ایران‌سنس، نوتو نسخ و ...
-- 🎯 **فقط فارسی دقیق**: Regex شامل `ZWNJ \u200C` و عدم اعمال روی آیکن/ورودی/کد (`shouldSkipElement()` در `content.js:64`)
-- ⚡ **پرفورمنس ۳ برابر**: `WeakSet` برای عدم پردازش دوباره، `requestIdleCallback` + `requestAnimationFrame`، توقف وقتی تب `hidden` است، بک‌آپ ۴ ثانیه (قبلاً ۲.۵)
-- 🔤 **وزن هوشمند**: `getClosestWeight()` در `fonts.js:105` — اگر مثلاً لاله‌زار فقط ۴۰۰ دارد و کاربر ۹۰۰ انتخاب کند، ۴۰۰ اعمال می‌شود و hint زرد نمایش داده می‌شود
-- ✨ **خوانایی تضمینی**: `line-height:1.7`, `letter-spacing:-0.01em`, `-webkit-font-smoothing:antialiased`, `text-rendering:optimizeLegibility` در `content.js:40`
-- 🛡️ **فال‌بک CDN**: اگر `cdn.jsdelivr.net` فیلتر/خطا داد، خودکار به وزیرمتن گوگل سوئیچ می‌کند (`content.js:14` `onerror`)
-- 🔍 **جستجو و ⭐ علاقه‌مندی** در `options.html` + فیلتر دسته‌بندی + `فقط علاقه‌مندی‌ها`
-- 🔄 **بازنشانی** در popup و options + مهاجرت خودکار و پاکسازی `bidiFix` قدیمی از `chrome.storage`
-- 🚀 **سازگار با SPA یوتیوب**: `yt-navigate-finish` و کامنت‌های داینامیک
+برنامه‌نویس: TheAzizi
 
-## 📦 نصب
-1. `chrome://extensions` → `Developer mode` → `Load unpacked` → پوشه `YTP-Font`
-2. آیکون پلاگین → انتخاب فونت → ذخیره خودکار
-3. `⚙️ تنظیمات کامل` برای جستجو، علاقه‌مندی و پیش‌نمایش
+## درباره پروژه
 
-## 📂 ساختار v2.2.0
+**YTP - Font** یک افزونه کروم (Manifest V3) است که متن‌های فارسی در یوتیوب (عنوان ویدیو، توضیحات، کامنت‌ها، چت) را به فونت فارسی دلخواه شما تغییر می‌دهد. متن انگلیسی بدون تغییر باقی می‌ماند. رابط خود افزونه (پاپ‌آپ و صفحه تنظیمات) هم با فونت انتخابی نمایش داده می‌شود.
+
+> About: A Chrome Extension (Manifest V3) that changes Persian text on YouTube to your chosen Persian font. English text stays untouched. The extension's own UI also uses the selected font.
+
+## ویژگی‌ها
+
+- **20+ فونت فارسی:** Vazirmatn, Estedad, Lalezar, Shabnam, Samim, Sahel, Parastoo, Gandom, Tanha, Yekan Bakh, IRANSans, Noto Naskh/Sans Arabic, Amiri, Markazi Text, Mirza و ...
+- **فقط فارسی دقیق:** تشخیص با `[\u0600-\u06FF\u200C\u200D]` و اسکیپ آیکن، ورودی، کد و المنت‌های مخفی
+- **وزن هوشمند:** اگر فونت درخواستی را نداشته باشد نزدیک‌ترین وزن اعمال و اطلاع داده می‌شود (`getClosestWeight` در `fonts.js`)
+- **پرفورمنس بهینه:** `WeakSet` + `requestIdleCallback` + `requestAnimationFrame` + توقف هنگام `document.hidden` + بک‌آپ هر ۴ ثانیه
+- **خوانایی:** `line-height:1.7` / `letter-spacing:-0.01em` / `font-smoothing` خودکار در `content.js`
+- **فال‌بک CDN:** خطای `cdn.jsdelivr.net` خودکار به Vazirmatn گوگل سوئیچ می‌کند
+- **رابط کامل:** پاپ‌آپ سریع + صفحه تنظیمات با جستجو، فیلتر دسته، ستاره علاقه‌مندی، پیش‌نمایش زنده و بازنشانی — همه با SVG بدون ایموجی
+- **سازگار با SPA یوتیوب:** هندل `yt-navigate-finish` و محتوای داینامیک
+
+## فونت‌ها
+
+| نام | خانواده | دسته | وزن‌ها |
+|---|---|---|---|
+| وزیرمتن | Vazirmatn | سن‌سریف مدرن | 100-900 |
+| استعداد | Estedad | سن‌سریف | 100-900 |
+| لاله‌زار | Lalezar | نمایشی | 400 |
+| شبنم | Shabnam | سن‌سریف | 300,400,500,700 |
+| صمیم | Samim | سن‌سریف گرد | 400,700 |
+| ساحل | Sahel | سن‌سریف | 400,700,900 |
+| پرستو | Parastoo | سریف | 400,700 |
+| گندم | Gandom | سن‌سریف | 400,700 |
+| تنها | Tanha | دست‌نویس | 400 |
+| یکان‌بخ | Yekan Bakh | سن‌سریف | 100-900 |
+| ایران‌سنس | IRANSans | سن‌سریف | 300,400,500,700 |
+| نوتو نسخ/سنس، امیری، مرکزی، میرزا، بالو، المسری، چانگا، ریم کوفی، شهرزاد | Google Fonts | متنوع | 400-900 |
+
+منبع فونت‌ها: `fonts.googleapis.com` و `cdn.jsdelivr.net/gh/rastikerdar`
+
+## نصب
+
+### نصب دستی (Developer Mode) — پیشنهادی
+
+1. پروژه را دانلود کنید: `git clone https://github.com/TheGreatAzizi/YTP-Font.git` یا ZIP دانلود
+2. در کروم به `chrome://extensions` بروید
+3. `Developer mode` را از بالا فعال کنید
+4. `Load unpacked` را بزنید و پوشه `YTP-Font` را انتخاب کنید
+5. وارد یوتیوب شوید، روی آیکون افزونه کلیک کنید و فونت را انتخاب کنید
+
+### از Chrome Web Store
+
+به‌زودی منتشر می‌شود.
+
+## استفاده
+
+1. روی آیکون YTP - Font در نوار ابزار کلیک کنید
+2. فونت، ضخامت و اندازه را انتخاب کنید (پیش‌نمایش زنده می‌بینید)
+3. خودکار ذخیره و روی یوتیوب اعمال می‌شود — نیازی به رفرش نیست
+4. برای جستجو و علاقه‌مندی‌ها `تنظیمات کامل` را باز کنید
+
+## ساختار پروژه
+
 ```
 YTP-Font/
-├── manifest.json   # v2.2.0 پایدار
-├── fonts.js        # ۲۱ فونت + getClosestWeight() + YTP_DEFAULTS (favorites)
-├── content.js      # WeakSet + وزن هوشمند + خوانایی + اسکیپ آیکن/اینپوت + فال‌بک
-├── background.js   # مهاجرت و پاکسازی bidiFix
-├── popup.html/js   # hint وزن + بازنشانی
-├── options.html/js # جستجو + دسته + علاقه‌مندی + hint
-└── icon*.png
+├── manifest.json   # Manifest V3, v2.2.0
+├── fonts.js        # دیتابیس 21 فونت + YTP_DEFAULTS + getClosestWeight
+├── content.js      # تشخیص فارسی، اعمال فونت، WeakSet، observer بهینه
+├── background.js   # نصب و مهاجرت storage
+├── popup.html      # پاپ‌آپ 360px + SVG
+├── popup.js        # منطق پاپ‌آپ + اعمال فونت به خود پلاگین
+├── options.html    # صفحه تنظیمات + گرید + جستجو + SVG
+├── options.js      # منطق تنظیمات + علاقه‌مندی
+├── icon16.png / icon48.png / icon128.png
+└── README.md
 ```
 
-## 🔄 تغییرات از v2.1 (برگشت)
-- ❌ حذف کامل `BIDI_CLASS` / `TITLE_BIDI_CLASS` / `bidiFix` / `bidiMode` که باعث باگ چیدمان تایتل‌ها می‌شد
-- ✅ برگشت به منطق پایدار v2.0 (فقط فونت، بدون دستکاری `direction`/`unicode-bidi`)
-- ✅ افزودن موارد بالا که همگی تست‌شده و بدون ریسک هستند
+## نحوه کار
 
-## 🔗 لینک‌ها
-- YouTube: https://www.youtube.com/@AziziWC
-- YouTube: https://www.youtube.com/@The_azizi
+- `content.js:6` متن فارسی با `/[\u0600-\u06FF\u200C\u200D]/` شناسایی می‌شود
+- `content.js:14` لینک فونت از CDN لود و `content.js:32` کلاس `ytp-font-applied` با `!important` اعمال می‌شود
+- `MutationObserver` با `requestIdleCallback` محتوای جدید یوتیوب را پوشش می‌دهد
+- تنظیمات در `chrome.storage.sync` ذخیره و بین پاپ‌آپ و تب یوتیوب لایو همگام می‌شود
+
+## توسعه
+
+```bash
+git clone https://github.com/TheGreatAzizi/YTP-Font.git
+cd YTP-Font
+# تغییری بده، سپس در chrome://extensions -> Reload
+```
+
+پیشنهاد یا باگ را در [Issues](https://github.com/TheGreatAzizi/YTP-Font/issues) ثبت کنید.
+
+## لینک‌های سازنده
+
+- YouTube AziziWC: https://www.youtube.com/@AziziWC
+- YouTube The_azizi: https://www.youtube.com/@The_azizi
 - Telegram: https://t.me/luluch_code
 - X: https://x.com/the_azzi
 - GitHub: https://github.com/TheGreatAzizi
 
+## لایسنس
+
+MIT License — فایل [LICENSE](LICENSE) را ببینید.
+
 ---
-ساخته شده با ❤️ توسط TheAzizi — v2.2.0 Stable
+
+ساخته شده توسط TheAzizi
