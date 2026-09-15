@@ -1,0 +1,44 @@
+{
+  "manifest_version": 3,
+  "name": "YTP - Font",
+  "description": "فونت فارسی دلخواه برای یوتیوب - ۲۰+ فونت زیبا، وزن هوشمند و تشخیص دقیق‌تر",
+  "version": "2.2.0",
+  "author": "TheAzizi",
+  "homepage_url": "https://github.com/TheGreatAzizi",
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "permissions": ["storage"],
+  "host_permissions": ["*://*.youtube.com/*"],
+  "action": {
+    "default_title": "YTP - Font",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  },
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/*"],
+      "js": ["fonts.js", "content.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["fonts/*"],
+      "matches": ["*://*.youtube.com/*"]
+    }
+  ]
+}
